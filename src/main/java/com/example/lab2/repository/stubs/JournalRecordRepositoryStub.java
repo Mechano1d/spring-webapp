@@ -55,7 +55,6 @@ public class JournalRecordRepositoryStub {
         records.add(record5);
     }
 
-    //@Bean
     public JournalRecord findById(int id) {
         return  records.stream()
                 .filter(s -> s.getStudentId() == id)
