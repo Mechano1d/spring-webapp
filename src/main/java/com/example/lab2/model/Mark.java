@@ -2,6 +2,9 @@ package com.example.lab2.model;
 
 import java.time.LocalDate;
 
+import org.springframework.context.annotation.Scope;
+
+@Scope("prototype")
 public class Mark {
     private final int markId;
     private final int studentId;

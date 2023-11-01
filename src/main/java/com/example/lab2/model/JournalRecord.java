@@ -2,42 +2,70 @@ package com.example.lab2.model;
 
 import java.time.LocalDate;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
+
+@Configuration
+@Scope("prototype")
 public class JournalRecord {
-    private final int studentId;
+    private int studentId;
     private String fullName;
-    private final LocalDate birthday;
+    private LocalDate birthday;
     private boolean isFullTimeEducationForm;
 
-    public JournalRecord(int studentId, String fullName, LocalDate birthday, boolean fullTimeEducationForm) {
-        this.studentId = studentId;
-        this.fullName = fullName;
-        this.birthday = birthday;
-        this.isFullTimeEducationForm = fullTimeEducationForm;
+    public JournalRecord() {}
+    
+    
+//    public JournalRecord(int studentId, String fullName, LocalDate birthday, boolean fullTimeEducationForm) {
+//        this.studentId = studentId;
+//        this.fullName = fullName;
+//        this.birthday = birthday;
+//        this.isFullTimeEducationForm = fullTimeEducationForm;
+//    }
+    
+    //Setter injection 
+    
+    public void setStudentId(int studentId) {
+    	this.studentId = studentId;
     }
-
-    public int getStudentId() {
-        return studentId;
+    
+    public void setFullName(String fullName) {
+    	this.fullName = fullName;
     }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public LocalDate getBirthday() {
-        return birthday;
+    
+    public void setBirthday(LocalDate birthday) {
+    	this.birthday = birthday;
     }
 
     public boolean isFullTimeEducationForm() {
         return isFullTimeEducationForm;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
     public void setFullTimeEducationForm(boolean isFullTimeEducationForm) {
         this.isFullTimeEducationForm = isFullTimeEducationForm;
     }
+    
+    
+    //Bean methods
+
+    @Bean
+    public int getStudentId() {
+        return studentId;
+    }
+
+    @Bean
+    public String getFullName() {
+        return fullName;
+    }
+
+    @Bean
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+
 
     @Override
     public String toString() {

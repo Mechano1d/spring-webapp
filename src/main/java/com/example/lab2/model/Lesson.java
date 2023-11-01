@@ -1,5 +1,8 @@
 package com.example.lab2.model;
 
+import org.springframework.context.annotation.Scope;
+
+@Scope("prototype")
 public class Lesson {
     private final int lessonId;
     private String subjectName;

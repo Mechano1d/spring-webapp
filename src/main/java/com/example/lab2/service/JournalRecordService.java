@@ -1,13 +1,11 @@
 package com.example.lab2.service;
 
 import com.example.lab2.model.JournalRecord;
-import com.example.lab2.repository.JournalRecordRepository;
 import com.example.lab2.repository.stubs.JournalRecordRepositoryStub;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

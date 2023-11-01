@@ -2,6 +2,9 @@ package com.example.lab2.model;
 
 import java.util.Objects;
 
+import org.springframework.context.annotation.Scope;
+
+@Scope("prototype")
 public class Professor {
     private final int professorId;
     private String fullName;
