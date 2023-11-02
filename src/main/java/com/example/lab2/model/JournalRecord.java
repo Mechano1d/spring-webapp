@@ -16,15 +16,14 @@ public class JournalRecord {
 
     public JournalRecord() {}
     
-    
-//    public JournalRecord(int studentId, String fullName, LocalDate birthday, boolean fullTimeEducationForm) {
-//        this.studentId = studentId;
-//        this.fullName = fullName;
-//        this.birthday = birthday;
-//        this.isFullTimeEducationForm = fullTimeEducationForm;
-//    }
-    
     //Setter injection 
+    
+    public void setInfo(int studentId, String fullName, LocalDate birthday, boolean fullTimeEducationForm) {
+    	this.studentId = studentId;
+	    this.fullName = fullName;
+	    this.birthday = birthday;
+	    this.isFullTimeEducationForm = fullTimeEducationForm;
+    }
     
     public void setStudentId(int studentId) {
     	this.studentId = studentId;

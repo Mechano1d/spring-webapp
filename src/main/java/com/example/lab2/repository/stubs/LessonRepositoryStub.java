@@ -11,11 +11,21 @@ public class LessonRepositoryStub {
     private static List<Lesson> lessons = new ArrayList<Lesson>();
 
     static {
-        Lesson lesson1 = new Lesson(1, "Data structures", 2, "Monday", 2);
-        Lesson lesson2 = new Lesson(2, "Algorithms", 3, "Friday", 1);
-        Lesson lesson3 = new Lesson(3, "Java", 1, "Friday", 4);
-        Lesson lesson4 = new Lesson(4, "Operational systems", 5, "Thursday", 2);
-        Lesson lesson5 = new Lesson(5, "Philosophy", 4, "Monday", 1);
+        Lesson lesson1 = new Lesson();
+        lesson1.setInfo(1, "Data structures", 2, "Monday", 2);
+        
+        Lesson lesson2 = new Lesson();
+        lesson2.setInfo(2, "Algorithms", 3, "Friday", 1);
+        
+        Lesson lesson3 = new Lesson();
+        lesson3.setInfo(3, "Java", 1, "Friday", 4);
+        
+        Lesson lesson4 = new Lesson();
+        lesson4.setInfo(4, "Operational systems", 5, "Thursday", 2);
+        
+        Lesson lesson5 = new Lesson();
+        lesson5.setInfo(5, "Philosophy", 4, "Monday", 1);
+        
         lessons.add(lesson1);
         lessons.add(lesson2);
         lessons.add(lesson3);

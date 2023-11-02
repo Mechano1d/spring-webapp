@@ -1,16 +1,19 @@
 package com.example.lab2.model;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 
 @Scope("prototype")
 public class Lesson {
-    private final int lessonId;
+    private int lessonId;
     private String subjectName;
     private int professorId;
     private String weekDay;
     private int classNumber;
 
-    public Lesson(int lessonId, String subjectName, int professorId, String weekDay, int classNumber) {
+    public Lesson() {}
+    
+    public void setInfo(int lessonId, String subjectName, int professorId, String weekDay, int classNumber) {
         this.lessonId = lessonId;
         this.professorId = professorId;
         this.subjectName = subjectName;
@@ -18,18 +21,22 @@ public class Lesson {
         this.classNumber = classNumber;
     }
 
+    @Bean
     public int getLessonId() {
         return lessonId;
     }
 
+    @Bean
     public int getProfessorId() {
         return professorId;
     }
 
+    @Bean
     public String getSubjectName() {
         return subjectName;
     }
 
+    @Bean
     public int getClassNumber() {
         return classNumber;
     }

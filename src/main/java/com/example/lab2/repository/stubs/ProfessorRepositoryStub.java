@@ -11,11 +11,21 @@ public class ProfessorRepositoryStub {
     private static List<Professor> professors = new ArrayList<Professor>();
 
     static {
-        Professor professor1 = new Professor(1, "Svitlana Proskura", "Dean");
-        Professor professor2 = new Professor(2, "Yaroslav Kornaga", "Professor");
-        Professor professor3 = new Professor(3, "Yevgeniy Vovk", "Professor");
-        Professor professor4 = new Professor(4, "Yuliia Kuliasha", "Professor");
-        Professor professor5 = new Professor(5, "Volodymyr Popenko", "Professor");
+        Professor professor1 = new Professor();
+        professor1.setInfo(1, "Svitlana Proskura", "Dean");
+        
+        Professor professor2 = new Professor();
+        professor2.setInfo(2, "Yaroslav Kornaga", "Professor");
+        
+        Professor professor3 = new Professor();
+        professor3.setInfo(3, "Yevgeniy Vovk", "Professor");
+        
+        Professor professor4 = new Professor();
+        professor4.setInfo(4, "Yuliia Kuliasha", "Professor");
+        
+        Professor professor5 = new Professor();
+        professor5.setInfo(5, "Volodymyr Popenko", "Professor");
+        
         professors.add(professor1);
         professors.add(professor2);
         professors.add(professor3);

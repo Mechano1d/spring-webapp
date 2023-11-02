@@ -12,11 +12,21 @@ public class MarkRepositoryStub {
     private static List<Mark> marks = new ArrayList<Mark>();
 
     static {
-        Mark mark1 = new Mark(1, 2, 1, LocalDate.of(2023, 10, 10), 9);
-        Mark mark2 = new Mark(2, 1, 3, LocalDate.of(2023, 10, 11), 10);
-        Mark mark3 = new Mark(3, 3, 1, LocalDate.of(2023, 10, 10), 8);
-        Mark mark4 = new Mark(4, 1, 2, LocalDate.of(2023, 10, 11), 10);
-        Mark mark5 = new Mark(5, 5, 1, LocalDate.of(2023, 10, 10), 9);
+        Mark mark1 = new Mark();
+        mark1.setInfo(1, 2, 1, LocalDate.of(2023, 10, 10), 9);
+        
+        Mark mark2 = new Mark();
+        mark2.setInfo(2, 1, 3, LocalDate.of(2023, 10, 11), 10);
+        
+        Mark mark3 = new Mark();
+        mark3.setInfo(3, 3, 1, LocalDate.of(2023, 10, 10), 8);
+        
+        Mark mark4 = new Mark();
+        mark4.setInfo(4, 1, 2, LocalDate.of(2023, 10, 11), 10);
+        
+        Mark mark5 = new Mark();
+        mark5.setInfo(5, 5, 1, LocalDate.of(2023, 10, 10), 9);
+        
         marks.add(mark1);
         marks.add(mark2);
         marks.add(mark3);

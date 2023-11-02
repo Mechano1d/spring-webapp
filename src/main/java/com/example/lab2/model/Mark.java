@@ -2,38 +2,48 @@ package com.example.lab2.model;
 
 import java.time.LocalDate;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 
 @Scope("prototype")
 public class Mark {
-    private final int markId;
-    private final int studentId;
-    private final int lessonId;
-    private final LocalDate date;
-    private final int mark;
+    private int markId;
+    private int studentId;
+    private int lessonId;
+    private LocalDate date;
+    private int mark;
 
-    public Mark(int markId, int studentId, int lessonId, LocalDate date, int mark) {
+    public Mark() {}
+
+    public void setInfo(int markId, int studentId, int lessonId, LocalDate date, int mark) {
         this.markId = markId;
         this.studentId = studentId;
         this.lessonId = lessonId;
         this.date = date;
         this.mark = mark;
     }
+    
+    @Bean
+    public int getMarkId() { 
+    	return markId; 
+    }
 
-    public int getMarkId() { return markId; }
-
+    @Bean
     public int getStudentId() {
         return studentId;
     }
 
+    @Bean
     public int getLessonId() {
         return lessonId;
     }
 
+    @Bean
     public LocalDate getDate() {
         return date;
     }
 
+    @Bean
     public int getMark() {
         return mark;
     }
