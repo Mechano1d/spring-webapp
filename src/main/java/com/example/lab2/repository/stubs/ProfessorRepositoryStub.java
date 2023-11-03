@@ -42,7 +42,7 @@ public class ProfessorRepositoryStub {
 
     public Professor findByFullName(String fullName) {
         return professors.stream()
-                .filter(prof -> prof.getFullName().equals(fullName))
+                .filter(prof -> prof.professor_getFullName().equals(fullName))
                 .findFirst()
                 .orElse(null);
     }
@@ -60,7 +60,7 @@ public class ProfessorRepositoryStub {
                 .filter(prof -> prof.getProfessorId() == professor.getProfessorId())
                 .findAny().orElse(null);
         if(profToUpdate != null) {
-            profToUpdate.setFullName(professor.getFullName());
+            profToUpdate.setFullName(professor.professor_getFullName());
             profToUpdate.setPosition(professor.getPosition());
         }
     }

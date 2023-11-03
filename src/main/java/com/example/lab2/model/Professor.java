@@ -3,8 +3,10 @@ package com.example.lab2.model;
 import java.util.Objects;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+@Configuration
 @Scope("prototype")
 public class Professor {
     private int professorId;
@@ -27,7 +29,7 @@ public class Professor {
     }
 
     @Bean
-    public String getFullName() {
+    public String professor_getFullName() {
         return fullName;
     }
 
@@ -36,12 +38,10 @@ public class Professor {
         return position;
     }
 
-    @Bean
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
 
-    @Bean
     public void setPosition(String position) {
         this.position = position;
     }

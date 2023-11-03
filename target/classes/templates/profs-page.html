@@ -21,7 +21,7 @@
             <tbody>
             <tr th:each="prof : ${professors}">
                 <td th:text="${prof.getProfessorId()}"></td>
-                <td th:text="${prof.getFullName()}"></td>
+                <td th:text="${prof.professor_getFullName()}"></td>
                 <td th:text="${prof.getPosition()}"></td>
             </tr>
             </tbody>

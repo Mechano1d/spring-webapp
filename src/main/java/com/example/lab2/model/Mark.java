@@ -3,8 +3,10 @@ package com.example.lab2.model;
 import java.time.LocalDate;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+@Configuration
 @Scope("prototype")
 public class Mark {
     private int markId;
@@ -29,12 +31,12 @@ public class Mark {
     }
 
     @Bean
-    public int getStudentId() {
+    public int mark_getStudentId() {
         return studentId;
     }
 
     @Bean
-    public int getLessonId() {
+    public int mark_getLessonId() {
         return lessonId;
     }
 

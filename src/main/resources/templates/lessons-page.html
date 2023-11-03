@@ -24,7 +24,7 @@
         <tr th:each="lesson : ${lessons}">
             <td th:text="${lesson.getLessonId()}"></td>
             <td th:text="${lesson.getSubjectName()}"></td>
-            <td th:text="${lesson.getProfessorId()}"></td>
+            <td th:text="${lesson.lesson_getProfessorId()}"></td>
             <td th:text="${lesson.getWeekDay()}"></td>
             <td th:text="${lesson.getClassNumber()}"></td>
         </tr>

@@ -21,8 +21,8 @@
         </thead>
         <tbody>
         <tr th:each="mark : ${marks}">
-            <td th:text="${mark.getStudentId()}"></td>
-            <td th:text="${mark.getLessonId()}"></td>
+            <td th:text="${mark.mark_getStudentId()}"></td>
+            <td th:text="${mark.mark_getLessonId()}"></td>
             <td th:text="${mark.getDate()}"></td>
             <td th:text="${mark.getMark()}"></td>
         </tr>

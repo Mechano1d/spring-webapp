@@ -1,8 +1,10 @@
 package com.example.lab2.model;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+@Configuration
 @Scope("prototype")
 public class Lesson {
     private int lessonId;
@@ -27,7 +29,7 @@ public class Lesson {
     }
 
     @Bean
-    public int getProfessorId() {
+    public int lesson_getProfessorId() {
         return professorId;
     }
 
